@@ -1,0 +1,186 @@
+
+  body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #6f42c1, #000000);
+      color: white;
+      overflow-x: hidden;
+      position: relative;
+      z-index: 0;
+    }
+    /* Animated moving dots background */
+    .dots-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+      background: transparent;
+    }
+    .dot {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      filter: drop-shadow(0 0 2px rgba(255,255,255,0.3));
+    }
+    /* Create multiple dots with different sizes, positions, and animation durations */
+    .dot:nth-child(1) {
+      width: 8px;
+      height: 8px;
+      top: 10%;
+      left: 5%;
+      animation: moveDots 20s linear infinite;
+      animation-delay: 0s;
+    }
+    .dot:nth-child(2) {
+      width: 6px;
+      height: 6px;
+      top: 30%;
+      left: 15%;
+      animation: moveDots 25s linear infinite;
+      animation-delay: 5s;
+    }
+    .dot:nth-child(3) {
+      width: 10px;
+      height: 10px;
+      top: 50%;
+      left: 25%;
+      animation: moveDots 22s linear infinite;
+      animation-delay: 2s;
+    }
+    .dot:nth-child(4) {
+      width: 5px;
+      height: 5px;
+      top: 70%;
+      left: 40%;
+      animation: moveDots 18s linear infinite;
+      animation-delay: 7s;
+    }
+    .dot:nth-child(5) {
+      width: 7px;
+      height: 7px;
+      top: 85%;
+      left: 60%;
+      animation: moveDots 24s linear infinite;
+      animation-delay: 3s;
+    }
+    .dot:nth-child(6) {
+      width: 9px;
+      height: 9px;
+      top: 20%;
+      left: 75%;
+      animation: moveDots 21s linear infinite;
+      animation-delay: 1s;
+    }
+    .dot:nth-child(7) {
+      width: 6px;
+      height: 6px;
+      top: 40%;
+      left: 80%;
+      animation: moveDots 19s linear infinite;
+      animation-delay: 6s;
+    }
+    .dot:nth-child(8) {
+      width: 8px;
+      height: 8px;
+      top: 60%;
+      left: 90%;
+      animation: moveDots 23s linear infinite;
+      animation-delay: 4s;
+    }
+    .dot:nth-child(9) {
+      width: 5px;
+      height: 5px;
+      top: 75%;
+      left: 95%;
+      animation: moveDots 20s linear infinite;
+      animation-delay: 0s;
+    }
+    .dot:nth-child(10) {
+      width: 7px;
+      height: 7px;
+      top: 90%;
+      left: 85%;
+      animation: moveDots 22s linear infinite;
+      animation-delay: 2s;
+    }
+    @keyframes moveDots {
+      0% {
+        transform: translate(0, 0);
+        opacity: 0.15;
+      }
+      50% {
+        opacity: 0.4;
+      }
+      100% {
+        transform: translate(30px, -30px);
+        opacity: 0.15;
+      }
+    }
+    /* Modern button style */
+    .btn-primary {
+      background: linear-gradient(90deg, #9f7aea, #6b46c1);
+      box-shadow: 0 4px 15px rgba(159, 122, 234, 0.6);
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(90deg, #6b46c1, #9f7aea);
+      box-shadow: 0 6px 20px rgba(159, 122, 234, 0.9);
+      transform: translateY(-2px);
+    }
+    /* Modern card style */
+    .card {
+      background: rgba(255 255 255 / 0.05);
+      backdrop-filter: saturate(180%) blur(12px);
+      border-radius: 1rem;
+      box-shadow: 0 8px 32px 0 rgba(111, 66, 193, 0.3);
+      border: 1px solid rgba(255 255 255 / 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px 0 rgba(111, 66, 193, 0.6);
+    }
+    /* Scrollbar hidden for mobile */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    /* Text shadows for better readability */
+    h1, h2, h3, h4, h5, p, a, span, button {
+      text-shadow: 0 0 6px rgba(0,0,0,0.6);
+    }
+    /* Blogger style a tag */
+    a.blogger-link {
+      position: relative;
+      color: #bb86fc;
+      font-weight: 600;
+      text-decoration: none;
+      padding-bottom: 2px;
+      transition: color 0.3s ease;
+    }
+    a.blogger-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, #bb86fc, #3700b3);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+    a.blogger-link:hover {
+      color: #e0b3ff;
+    }
+    a.blogger-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
